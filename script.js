@@ -21,7 +21,6 @@ if (toggle && nav) {
 
 // Scroll reveal
 const targets = document.querySelectorAll(".reveal");
-
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
@@ -30,5 +29,4 @@ const io = new IntersectionObserver(
   },
   { threshold: 0.12 }
 );
-
 targets.forEach((el) => io.observe(el));
