@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -13,7 +14,7 @@
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark"></span>
+        <!-- <span class="brand__mark"></span> -->
         <span class="brand__name">TIPRI</span>
       </a>
 
@@ -26,72 +27,43 @@
         <a href="#overview-anchor">概要</a>
         <a href="#howto">使い方</a>
         <a href="#stores-faq">導入店舗</a>
-        <a class="btn btn--small" href="#download">ダウンロード</a>
+        <a class="btn btn--small" href="#download">始める</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero section" id="communication">
-      <div class="container hero__grid">
-        <div class="hero__copy reveal">
-          <p class="kicker">TIPRI</p>
-          <h1 class="hero__title">
-            もっと楽しく、<br class="br-md" />
-            もっとおもてなし。
-          </h1>
-          <p class="hero__lead">
-            「気持ちの良い接客だ」、と感じる瞬間ありませんか。<br />
-            その気持ちに蓋をせず、従業員に届けましょう。
-          </p>
+    <section class="heroCover" id="top">
+      <div class="heroCover__bg" aria-hidden="true"></div>
+      <div class="heroCover__overlay" aria-hidden="true"></div>
+      <div class="container heroCover__content">
+        <div class="heroCover__copy reveal">
+          <p class="heroCover__kicker">TIPRI</p>
+          <h1 class="heroCover__title">TIPRI</h1>
+          <p class="heroCover__lead">あなたのおもてなしを、スタッフへ。</p>
 
-          <div class="hero__cta">
-            <a class="btn" href="#download">無料で始める</a>
-            <a class="btn btn--ghost" href="#overview-anchor">詳しく見る</a>
-          </div>
-
-          <div class="hero__meta">
-            <div class="metaItem">
-              <div class="metaItem__num">10M+</div>
-              <div class="metaItem__label">ユーザー</div>
-            </div>
-            <div class="metaItem">
-              <div class="metaItem__num">99.9%</div>
-              <div class="metaItem__label">稼働率</div>
-            </div>
-            <div class="metaItem">
-              <div class="metaItem__num">24/7</div>
-              <div class="metaItem__label">サポート</div>
+          <div class="heroCover__download">
+            <span class="heroCover__label">ダウンロード</span>
+            <div class="heroCover__icons">
+              <a class="heroIcon" href="#download" aria-label="iOS">
+                <span class="heroIcon__inner"></span>
+              </a>
+              <a class="heroIcon" href="#download" aria-label="Android">
+                <span class="heroIcon__inner">▶</span>
+              </a>
+              <a class="heroIcon" href="#download" aria-label="Web">
+                <span class="heroIcon__inner">▦</span>
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="hero__visual reveal">
-          <div class="device">
-            <div class="device__topbar"></div>
-            <div class="device__screen">
-              <div class="chat">
-                <div class="bubble bubble--left">スタッフさんの対応、最高だった</div>
-                <div class="bubble bubble--right">よかったらTIPRI送ってみよう</div>
-                <div class="bubble bubble--left">了解！今送るね</div>
-                <div class="bubble bubble--right">ありがとう！</div>
-              </div>
-              <div class="chips">
-                <span class="chip">サブスク</span>
-                <span class="chip">レビュー</span>
-                <span class="chip">LINE公式</span>
-                <span class="chip">送る</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="floating floating--a"></div>
-          <div class="floating floating--b"></div>
-          <div class="floating floating--c"></div>
         </div>
       </div>
+      <a class="heroCover__scroll" href="#overview-anchor" aria-label="Scroll">
+        <span class="heroCover__scrollText">Scroll</span>
+        <span class="heroCover__scrollLine" aria-hidden="true"></span>
+      </a>
     </section>
+
 
     <!-- ✅ 概要アンカー：ここに飛ぶ（ヘッダーに隠れないようオフセット） -->
     <section id="overview-anchor" class="anchor"></section>
@@ -266,4 +238,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
