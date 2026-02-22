@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sample LP</title>
+  <meta name="description" content="LINE風のシンプルLPサンプル" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark">●</span>
+        <span class="brand__name">SAMPLE</span>
+      </a>
+
+      <button class="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#communication">コミュニケーション</a>
+        <a href="#features">特長</a>
+        <a href="#security">セキュリティ</a>
+        <a class="btn btn--small" href="#download">ダウンロード</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero section" id="communication">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="kicker">コミュニケーション</p>
+          <h1 class="hero__title">
+            もっと自然に、<br class="br-md" />
+            もっとスムーズに。
+          </h1>
+          <p class="hero__lead">
+            連絡、共有、会話。必要なものを、気持ちよくまとめて。
+            余白を活かしたレイアウトと読みやすいタイポグラフィで、
+            プロダクトページらしい印象に。
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#download">無料で始める</a>
+            <a class="btn btn--ghost" href="#features">詳しく見る</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaItem">
+              <div class="metaItem__num">10M+</div>
+              <div class="metaItem__label">ユーザー</div>
+            </div>
+            <div class="metaItem">
+              <div class="metaItem__num">99.9%</div>
+              <div class="metaItem__label">稼働率</div>
+            </div>
+            <div class="metaItem">
+              <div class="metaItem__num">24/7</div>
+              <div class="metaItem__label">サポート</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="device">
+            <div class="device__topbar"></div>
+            <div class="device__screen">
+              <div class="chat">
+                <div class="bubble bubble--left">今夜、空いてる？</div>
+                <div class="bubble bubble--right">うん！19時どう？</div>
+                <div class="bubble bubble--left">OK、駅前で！</div>
+                <div class="bubble bubble--right">了解！</div>
+              </div>
+              <div class="chips">
+                <span class="chip">通話</span>
+                <span class="chip">写真</span>
+                <span class="chip">スタンプ</span>
+                <span class="chip">グループ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating floating--a"></div>
+          <div class="floating floating--b"></div>
+          <div class="floating floating--c"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos section">
+      <div class="container">
+        <p class="muted center">多くのチームが利用しています</p>
+        <div class="logoRow reveal">
+          <div class="logoCard">Company A</div>
+          <div class="logoCard">Company B</div>
+          <div class="logoCard">Company C</div>
+          <div class="logoCard">Company D</div>
+          <div class="logoCard">Company E</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>特長</h2>
+          <p class="muted">ページ全体を「余白＋大きい見出し＋シンプルなカード」で構成するのがコツです。</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3>シンプルな導線</h3>
+            <p>ボタンは2つまで。主ボタンを目立たせて迷わせない。</p>
+          </article>
+          <article class="card reveal">
+            <h3>読みやすい階層</h3>
+            <p>見出し→リード→補足、の順で情報を出す。</p>
+          </article>
+          <article class="card reveal">
+            <h3>軽いアニメーション</h3>
+            <p>スクロールでふわっと表示。やりすぎないのが大事。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternating sections -->
+    <section class="section alt">
+      <div class="container split">
+        <div class="split__text reveal">
+          <p class="kicker">グループ</p>
+          <h2>みんなで、迷わず共有。</h2>
+          <p class="muted">
+            交互レイアウト（テキスト⇄ビジュアル）にすると、長いLPでも飽きにくいです。
+          </p>
+          <ul class="list">
+            <li>投稿・返信の整理</li>
+            <li>画像・ファイル共有</li>
+            <li>ピン留め・検索</li>
+          </ul>
+        </div>
+        <div class="split__media reveal">
+          <div class="panel">
+            <div class="panel__badge">NEW</div>
+            <div class="panel__title">共有スペース</div>
+            <div class="panel__row"></div>
+            <div class="panel__row"></div>
+            <div class="panel__row"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container split split--reverse">
+        <div class="split__text reveal">
+          <p class="kicker">セキュリティ</p>
+          <h2>大切な情報を守る。</h2>
+          <p class="muted">
+            ここも「安心感のある文章＋アイコン風の箇条書き」でそれっぽくなります。
+          </p>
+          <div class="pillRow">
+            <span class="pill">暗号化</span>
+            <span class="pill">アクセス制御</span>
+            <span class="pill">監査ログ</span>
+          </div>
+        </div>
+        <div class="split__media reveal">
+          <div class="shield">
+            <div class="shield__icon">🔒</div>
+            <div class="shield__text">
+              <div class="shield__title">Secure by design</div>
+              <div class="muted">必要なところだけ強調して、文章は短く。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section" id="download">
+      <div class="container cta__inner reveal">
+        <h2>今すぐ始めよう</h2>
+        <p class="muted">ダウンロードボタン・フォーム・ストア導線などに置き換え可能です。</p>
+        <div class="cta__actions">
+          <a class="btn" href="#top">トップへ</a>
+          <a class="btn btn--ghost" href="#features">機能を見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <small>© 2026 SAMPLE</small>
+      <div class="footer__links">
+        <a href="#top">利用規約</a>
+        <a href="#top">プライバシー</a>
+        <a href="#top">お問い合わせ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
