@@ -618,7 +618,7 @@ a:hover {
 .heroCover__bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/hero.jpg");
+  background-image: url("assets/背景写真.jpg");
   /* ←好きな画像に */
   background-size: cover;
   background-position: center;
