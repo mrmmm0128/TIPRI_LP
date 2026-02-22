@@ -435,3 +435,172 @@ a:hover{ color: var(--accent2); }
   .nav.is-open{ display:flex; }
   .nav a{ width:100%; }
 }
+
+/* ===== Hero Cover (LINEっぽい初期画面) ===== */
+.heroCover{
+  position: relative;
+  min-height: calc(100vh - 68px); /* sticky header分を引く */
+  padding-top: 68px;             /* header下に潜らない */
+  overflow: hidden;
+}
+
+/* 背景画像（ここを差し替える） */
+.heroCover__bg{
+  position:absolute;
+  inset:0;
+  background-image: url("images/hero.jpg"); /* ←好きな画像に */
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+/* 文字が読みやすいように薄い暗幕 */
+.heroCover__overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.45) 0%,
+    rgba(0,0,0,.28) 35%,
+    rgba(0,0,0,.18) 60%,
+    rgba(0,0,0,.10) 100%
+  );
+}
+
+.heroCover__content{
+  position: relative;
+  height: calc(100vh - 68px);
+  display:flex;
+  align-items:flex-end;
+  padding-bottom: 72px; /* 文字を下に寄せる */
+}
+
+.heroCover__copy{
+  color: #fff;
+  max-width: 760px;
+}
+
+.heroCover__kicker{
+  margin:0 0 10px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  opacity:.95;
+}
+
+.heroCover__title{
+  margin:0 0 10px;
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+
+.heroCover__lead{
+  margin:0 0 22px;
+  font-size: clamp(18px, 2.1vw, 32px);
+  opacity:.92;
+}
+
+/* ダウンロード行（左下） */
+.heroCover__download{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.heroCover__label{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 900;
+  opacity:.95;
+}
+
+.heroCover__icons{
+  display:flex;
+  gap: 10px;
+}
+
+.heroIcon{
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.12);
+  display:grid;
+  place-items:center;
+  backdrop-filter: blur(6px);
+}
+.heroIcon:hover{
+  background: rgba(255,255,255,.18);
+}
+.heroIcon__inner{
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* 下中央のScroll */
+.heroCover__scroll{
+  position:absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+  color: rgba(255,255,255,.9);
+  text-decoration:none;
+  z-index: 3;
+}
+
+.heroCover__scrollText{
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: none;
+}
+
+/* ラインを伸縮させる */
+.heroCover__scrollLine{
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,.75);
+  border-radius: 2px;
+  animation: scrollLine 1.4s ease-in-out infinite;
+}
+
+@keyframes scrollLine{
+  0%   { transform: translateY(0); opacity: .35; height: 30px; }
+  50%  { transform: translateY(6px); opacity: 1; height: 54px; }
+  100% { transform: translateY(0); opacity: .35; height: 30px; }
+}
+
+/* 既存のrevealが白文字heroでも自然に見えるように */
+.heroCover .reveal{
+  opacity: 0;
+  transform: translateY(10px);
+}
+.heroCover .reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* スマホ調整 */
+@media (max-width: 760px){
+  .heroCover__content{
+    padding-bottom: 58px;
+  }
+  .heroCover__download{
+    flex-direction:column;
+    align-items:flex-start;
+    gap: 10px;
+  }
+  .heroIcon{
+    width: 44px;
+    height: 44px;
+  }
+}
+
