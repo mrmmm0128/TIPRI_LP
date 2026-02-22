@@ -27,7 +27,7 @@
         <a href="#overview-anchor">概要</a>
         <a href="#howto">使い方</a>
         <a href="#stores-faq">導入店舗</a>
-        <a class="btn btn--small" href="#download">始める</a>
+        <a class="btn btn--small" href="#" id="startBtn">始める</a>
       </nav>
     </div>
   </header>
@@ -36,13 +36,13 @@
     <section class="heroCover" id="top">
       <div class="heroCover__bg" aria-hidden="true"></div>
       <div class="heroCover__overlay" aria-hidden="true"></div>
+      <div class="heroCover__frame" aria-hidden="true"></div>
       <div class="container heroCover__content">
         <div class="heroCover__copy reveal">
-          <p class="heroCover__kicker">TIPRI</p>
           <h1 class="heroCover__title">TIPRI</h1>
-          <p class="heroCover__lead">あなたのおもてなしを、スタッフへ。</p>
+          <p class="heroCover__lead">あなたの感謝を、スタッフへ。</p>
 
-          <div class="heroCover__download">
+          <!-- <div class="heroCover__download">
             <span class="heroCover__label">ダウンロード</span>
             <div class="heroCover__icons">
               <a class="heroIcon" href="#download" aria-label="iOS">
@@ -55,7 +55,7 @@
                 <span class="heroIcon__inner">▦</span>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <a class="heroCover__scroll" href="#overview-anchor" aria-label="Scroll">
@@ -69,11 +69,11 @@
     <section id="overview-anchor" class="anchor"></section>
 
     <!-- TIPRI overview -->
-    <section class="section" id="overview">
+    <!-- <section class="section" id="overview">
       <div class="container">
         <div class="sectionHead reveal">
           <h2>TIPRIの概要</h2>
-          <p class="muted">“送る”をもっと簡単に。サブスク・レビュー・LINE公式と連携して、店舗の体験をアップデート。</p>
+          <p class="muted">“感謝を送る”をもっと簡単に。店舗の体験をアップデート。</p>
         </div>
 
         <div class="overviewGrid">
@@ -128,14 +128,130 @@
           </article>
         </div>
       </div>
+    </section> -->
+    <!-- TIPRI overview (左右レイアウト) -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>TIPRIの概要</h2>
+          <p class="muted">“感謝を送る”をもっと簡単に。店舗の体験をアップデート。</p>
+        </div>
+
+        <div class="overviewRows">
+          <!-- 1: 文章左 / 画像右 -->
+          <article class="ovRow reveal">
+            <div class="ovText">
+              <div class="ovBadge">TIP</div>
+              <h3 class="ovTitle">チップを贈る</h3>
+              <p class="ovLead">ワンタップで気持ちを届ける。店舗体験の余韻を、そのまま応援につなげます。</p>
+              <ul class="ovList">
+                <li>QRでスムーズに導線</li>
+                <li>送る体験をシンプルに</li>
+                <li>店舗に合わせた導線設計</li>
+              </ul>
+              <a class="btn btn--ghost btn--small" href="#howto">詳しく見る</a>
+            </div>
+
+            <div class="ovMedia">
+              <div class="ovFrame">
+                <img src="images/scene-send.jpg" alt="TIPRIを送っている様子" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 2: 画像左 / 文章右 -->
+          <article class="ovRow ovRow--reverse reveal">
+            <div class="ovText">
+              <div class="ovBadge">SUBSCRIPTION</div>
+              <h3 class="ovTitle">サブスクで贈る</h3>
+              <p class="ovLead">毎月の応援を自動化。継続的な支援で、店舗の売上とスタッフのやりがいを後押し。</p>
+              <ul class="ovList">
+                <li>継続支援でLTV向上</li>
+                <li>お客様の応援を習慣化</li>
+                <li>店舗の運用負担を最小化</li>
+              </ul>
+              <a class="btn btn--ghost btn--small" href="#howto">運用イメージ</a>
+            </div>
+
+            <div class="ovMedia">
+              <div class="ovFrame">
+                <img src="images/scene-subscription.jpg" alt="サブスクで送れる" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 3: 文章左 / 画像右 -->
+          <article class="ovRow reveal">
+            <div class="ovText">
+              <div class="ovBadge">REVIEW</div>
+              <h3 class="ovTitle">Googleレビューに連携</h3>
+              <p class="ovLead">レビュー導線をスムーズに。体験直後の高い熱量を、自然な投稿につなげます。</p>
+              <ul class="ovList">
+                <li>満足度の高い瞬間に誘導</li>
+                <li>レビュー投稿の離脱を削減</li>
+                <li>店舗評価の安定化に貢献</li>
+              </ul>
+              <a class="btn btn--ghost btn--small" href="#stores-faq">導入事例を見る</a>
+            </div>
+
+            <div class="ovMedia">
+              <div class="ovFrame">
+                <img src="images/scene-google-review.jpg" alt="Googleレビューに連携" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 4: 画像左 / 文章右 -->
+          <article class="ovRow ovRow--reverse reveal">
+            <div class="ovText">
+              <div class="ovBadge">LINE</div>
+              <h3 class="ovTitle">LINE公式アカウント連携</h3>
+              <p class="ovLead">店舗のLINE公式へ自然に誘導。友だち追加→リピート施策まで一気通貫。</p>
+              <ul class="ovList">
+                <li>友だち追加の導線を整備</li>
+                <li>リピート施策と相性◎</li>
+                <li>既存運用に無理なく統合</li>
+              </ul>
+              <a class="btn btn--ghost btn--small" href="#download">資料を請求</a>
+            </div>
+
+            <div class="ovMedia">
+              <div class="ovFrame">
+                <img src="images/scene-line-oa.jpg" alt="LINE公式アカウント連携" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 5: 文章左 / 画像右 -->
+          <article class="ovRow reveal">
+            <div class="ovText">
+              <div class="ovBadge">STAFF</div>
+              <h3 class="ovTitle">従業員へ送金され、スタッフが喜ぶ</h3>
+              <p class="ovLead">応援が可視化され、接客のモチベーションと満足度が上がります。</p>
+              <ul class="ovList">
+                <li>応援が“見える”体験</li>
+                <li>スタッフ定着・満足度に貢献</li>
+                <li>おもてなし文化を育てる</li>
+              </ul>
+              <a class="btn btn--ghost btn--small" href="#download">はじめる</a>
+            </div>
+
+            <div class="ovMedia">
+              <div class="ovFrame">
+                <img src="images/scene-staff-happy.jpg" alt="スタッフが喜んでいる様子" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
+
 
     <!-- How to -->
     <section class="section alt" id="howto">
       <div class="container">
         <div class="sectionHead reveal">
           <h2>使い方</h2>
-          <p class="muted">代理店向け／契約店舗向けのPDFを用意し、ボタンからすぐ確認できるようにします。</p>
         </div>
 
         <div class="howtoGrid">
@@ -151,6 +267,41 @@
             <a class="btn btn--ghost" href="pdf/store-guide.pdf" target="_blank" rel="noopener">PDFを開く</a>
           </article>
         </div>
+        <!-- HowTo overview (画像＋テキスト) -->
+        <div class="howtoOverview reveal">
+          <div class="howtoOverview__item">
+            <div class="howtoOverview__img">
+              <img src="images/howto-chat.png" alt="トーク・通話・ビデオ通話" />
+            </div>
+            <h4 class="howtoOverview__title">トーク・音声通話・ビデオ通話</h4>
+            <p class="howtoOverview__text">
+              TIPRIを通じて、スタッフとのコミュニケーションをより身近に。
+              テキストだけでなく、音声・ビデオを組み合わせた体験が可能です。
+            </p>
+          </div>
+
+          <div class="howtoOverview__item">
+            <div class="howtoOverview__img">
+              <img src="images/howto-stamp.png" alt="スタンプ・着せかえ" />
+            </div>
+            <h4 class="howtoOverview__title">スタンプ・絵文字・着せかえ</h4>
+            <p class="howtoOverview__text">
+              気持ちを直感的に伝えられるスタンプや絵文字。
+              応援の体験を、より楽しくカジュアルに演出します。
+            </p>
+          </div>
+
+          <div class="howtoOverview__item">
+            <div class="howtoOverview__img">
+              <img src="images/howto-openchat.png" alt="オープンチャット" />
+            </div>
+            <h4 class="howtoOverview__title">オープンチャット</h4>
+            <p class="howtoOverview__text">
+              同じ店舗・サービスに興味を持つ人たちとつながれる場を提供。
+              ファン同士の交流が、店舗の価値を広げます。
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -159,12 +310,12 @@
       <div class="container">
         <div class="sectionHead reveal">
           <h2>導入店舗とFAQ</h2>
-          <p class="muted">導入実績（例）と、よくある質問をまとめました。</p>
+          <p class="muted">導入実績と、よくある質問。</p>
         </div>
 
         <div class="storesFaqGrid">
           <div class="storesPanel reveal">
-            <h3>導入店舗（例）</h3>
+            <h3>導入店舗</h3>
             <div class="storesList">
               <div class="storeItem">
                 <div class="storeItem__name">TIPRI Cafe 渋谷</div>
@@ -189,12 +340,12 @@
             <h3>FAQ</h3>
 
             <details class="faqItem">
-              <summary>TIPRIは誰が送れますか？</summary>
+              <summary>チップは誰が送れますか？</summary>
               <p class="muted">来店したお客様が送れます。導線はQRやURLなど、店舗に合わせて設計できます。</p>
             </details>
 
             <details class="faqItem">
-              <summary>サブスクはいつでも解約できますか？</summary>
+              <summary>導入後、解約は常にできますか？</summary>
               <p class="muted">可能です。解約フローや課金タイミングは運用に合わせて案内できます。</p>
             </details>
 
@@ -205,15 +356,15 @@
 
             <details class="faqItem">
               <summary>導入までどれくらいかかりますか？</summary>
-              <p class="muted">店舗数や要件によりますが、最短で数日〜で開始できる想定です。</p>
+              <p class="muted">店舗数や要件によりますが、即日開始できる想定です。</p>
             </details>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Download / CTA -->
-    <section class="cta section" id="download">
+
+    <!-- <section class="cta section" id="download">
       <div class="container cta__inner reveal">
         <h2>ダウンロード</h2>
         <p class="muted">資料やアプリ導線など、用途に合わせて差し替えできます。</p>
@@ -222,7 +373,7 @@
           <a class="btn btn--ghost" href="#top">トップへ</a>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">
@@ -235,6 +386,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- Start modal -->
+<div class="modal" id="startModal" aria-hidden="true">
+  <div class="modal__overlay" data-close="true"></div>
+
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="startModalTitle">
+    <div class="modal__head">
+      <h3 id="startModalTitle">どちらで始めますか？</h3>
+      <button class="modal__close" type="button" aria-label="閉じる" data-close="true">×</button>
+    </div>
+
+    <p class="muted modal__desc">用途に合わせて遷移先が変わります。</p>
+
+    <div class="modal__actions">
+      <a class="btn" href="https://admin.tipri.jp" target="_blank" rel="noopener">代理店</a>
+      <a class="btn btn--ghost" href="https://tipri.jp" target="_blank" rel="noopener">契約店舗</a>
+    </div>
+  </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
