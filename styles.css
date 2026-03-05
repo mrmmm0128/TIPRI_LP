@@ -328,6 +328,28 @@ a:hover {
   background: radial-gradient(circle at 30% 30%, rgba(17, 24, 39, .10), transparent 60%);
 }
 
+/* ===== セクションタイトル統一デザイン ===== */
+
+.sectionHead h2{
+  position: relative;
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: .02em;
+  padding-bottom: 10px;
+}
+
+/* 黄色ライン */
+.sectionHead h2::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  background: #FCC400;
+  border-radius: 2px;
+}
+
 /* headings */
 .sectionHead {
   display: flex;
@@ -1046,3 +1068,158 @@ a:hover {
   will-change: opacity, transform;
 }
 
+
+
+/* ===== Howto Overview: シンプル＆おしゃれ化 ===== */
+.howtoOverview{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+@media (max-width: 900px){
+  .howtoOverview{ grid-template-columns: 1fr; }
+}
+
+.howtoOverview__item{
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+@media (hover:hover){
+  .howtoOverview__item:hover{
+    transform: translateY(-3px);
+    box-shadow:
+      0 14px 32px rgba(0,0,0,.12),
+      0 0 0 2px rgba(252,196,0,.25); /* ←TIPRI黄色 */
+  }
+}
+
+
+/* 画像を“デバイスっぽい枠”に */
+.howtoOverview__img{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f6f6f6;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+}
+
+/* 上部の小さな“ノッチ/バー”でプロダクト感 */
+.howtoOverview__img::before{
+  content:"";
+  position:absolute;
+  top: 10px;
+  left: 50%;
+  width: 38%;
+  height: 10px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(0,0,0,.10);
+  z-index: 2;
+}
+
+/* 画像は“貼った感”を消して綺麗に */
+.howtoOverview__img img{
+  display:block;
+  width:100%;
+  height:auto;
+  transform: translateZ(0);
+}
+
+/* タイトル・本文を整える（余計な主張を抑える） */
+.howtoOverview__title{
+  margin: 12px 2px 6px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+.howtoOverview__text{
+  margin: 0 2px;
+  color: rgba(0,0,0,.72);
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+/* セクション見出しも少し締める */
+#howto .sectionHead h2{
+  letter-spacing: .02em;
+}
+
+/* HowtoのPDFカード側も“同じトーン”に寄せる（任意だけど効く） */
+.howtoGrid{
+  gap: 18px;
+}
+
+.howtoCard{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  background: rgba(255,255,255,.85);
+}
+
+.howtoCard h3{
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+.howtoOverview__title{
+  margin: 12px 2px 6px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  position: relative;
+  padding-left: 12px;
+}
+
+.howtoOverview__title::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:4px;
+  width:4px;
+  height:16px;
+  background:#FCC400;
+  border-radius:2px;
+}
+
+.howtoOverview__img{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f6f6f6;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* 上にTIPRIライン */
+.howtoOverview__img::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:#FCC400;
+}
+#howto h2{
+  position:relative;
+  display:inline-block;
+}
+
+#howto h2::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:40%;
+  height:4px;
+  background:#FCC400;
+  border-radius:2px;
+}
