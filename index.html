@@ -11,7 +11,7 @@
 
 <body>
   <!-- Header -->
-  <header class="header" id="top">
+  <header class="header" id="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Home">
         <!-- <span class="brand__mark"></span> -->
@@ -42,20 +42,7 @@
           <h1 class="heroCover__title">TIPRI</h1>
           <p class="heroCover__lead">あなたの感謝を、スタッフへ。</p>
 
-          <!-- <div class="heroCover__download">
-            <span class="heroCover__label">ダウンロード</span>
-            <div class="heroCover__icons">
-              <a class="heroIcon" href="#download" aria-label="iOS">
-                <span class="heroIcon__inner"></span>
-              </a>
-              <a class="heroIcon" href="#download" aria-label="Android">
-                <span class="heroIcon__inner">▶</span>
-              </a>
-              <a class="heroIcon" href="#download" aria-label="Web">
-                <span class="heroIcon__inner">▦</span>
-              </a>
-            </div>
-          </div> -->
+          
         </div>
       </div>
       <a class="heroCover__scroll" href="#overview-anchor" aria-label="Scroll">
@@ -64,72 +51,7 @@
       </a>
     </section>
 
-
-    <!-- ✅ 概要アンカー：ここに飛ぶ（ヘッダーに隠れないようオフセット） -->
     <section id="overview-anchor" class="anchor"></section>
-
-    <!-- TIPRI overview -->
-    <!-- <section class="section" id="overview">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <h2>TIPRIの概要</h2>
-          <p class="muted">“感謝を送る”をもっと簡単に。店舗の体験をアップデート。</p>
-        </div>
-
-        <div class="overviewGrid">
-          <article class="overviewCard reveal">
-            <div class="overviewCard__img">
-              <img src="images/scene-send.jpg" alt="TIPRIを送っている様子" />
-            </div>
-            <div class="overviewCard__body">
-              <h3>TIPRIを送っている様子</h3>
-              <p class="muted">ワンタップで気持ちを届ける。店舗体験の余韻を、そのまま応援につなげます。</p>
-            </div>
-          </article>
-
-          <article class="overviewCard reveal">
-            <div class="overviewCard__img">
-              <img src="images/scene-subscription.jpg" alt="サブスクで送れる" />
-            </div>
-            <div class="overviewCard__body">
-              <h3>サブスクで送れる</h3>
-              <p class="muted">毎月の応援を自動化。継続的な支援で、店舗の売上とスタッフのやりがいを後押し。</p>
-            </div>
-          </article>
-
-          <article class="overviewCard reveal">
-            <div class="overviewCard__img">
-              <img src="images/scene-google-review.jpg" alt="Googleレビューに連携" />
-            </div>
-            <div class="overviewCard__body">
-              <h3>Googleレビューに連携</h3>
-              <p class="muted">レビュー導線をスムーズに。体験直後の高い熱量を、自然な投稿につなげます。</p>
-            </div>
-          </article>
-
-          <article class="overviewCard reveal">
-            <div class="overviewCard__img">
-              <img src="images/scene-line-oa.jpg" alt="LINE公式アカウント連携" />
-            </div>
-            <div class="overviewCard__body">
-              <h3>LINE公式アカウント連携</h3>
-              <p class="muted">店舗のLINE公式へ自然に誘導。友だち追加→リピート施策まで一気通貫。</p>
-            </div>
-          </article>
-
-          <article class="overviewCard reveal">
-            <div class="overviewCard__img">
-              <img src="images/scene-staff-happy.jpg" alt="スタッフが喜んでいる様子" />
-            </div>
-            <div class="overviewCard__body">
-              <h3>従業員へ送金され、スタッフが喜ぶ</h3>
-              <p class="muted">応援が可視化されることで、接客のモチベーションと満足度が上がります。</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section> -->
-    <!-- TIPRI overview (左右レイアウト) -->
     <section class="section" id="overview">
       <div class="container">
         <div class="sectionHead reveal">
@@ -212,7 +134,7 @@
                 <li>リピート施策と相性◎</li>
                 <li>既存運用に無理なく統合</li>
               </ul>
-              <a class="btn btn--ghost btn--small" href="#download">資料を請求</a>
+              <a class="btn btn--ghost btn--small" href="#howto">運用イメージ</a>
             </div>
 
             <div class="ovMedia">
@@ -233,7 +155,7 @@
                 <li>スタッフ定着・満足度に貢献</li>
                 <li>おもてなし文化を育てる</li>
               </ul>
-              <a class="btn btn--ghost btn--small" href="#download">はじめる</a>
+              <a class="btn btn--ghost btn--small" href="#howto">はじめる</a>
             </div>
 
             <div class="ovMedia">
@@ -379,17 +301,19 @@
   <footer class="footer">
     <div class="container footer__inner">
       <small>© 2026 TIPRI</small><br />
-      <small class="footer__credit">制作：株式会社ZOTMAN</small>
+      <a href="https://www.zotman.jp/" target="_blank" rel="noopener">
+  <small class="footer__credit">制作：株式会社ZOTMAN</small>
+</a>
       <div class="footer__links">
         <a href="/terms.html">利用規約</a>
         <a href="/privacy.html">プライバシー</a>
-        <a href="#top">お問い合わせ</a>
+        <a href="#" id="contactLink">お問い合わせ</a>
       </div>
     </div>
   </footer>
 
   <!-- Start modal -->
-<div class="modal" id="startModal" aria-hidden="true">
+　<div class="modal" id="startModal" aria-hidden="true">
   <div class="modal__overlay" data-close="true"></div>
 
   <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="startModalTitle">

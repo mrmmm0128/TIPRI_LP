@@ -148,3 +148,12 @@ targets.forEach((el) => io.observe(el));
   update();
 })();
 
+const contactLink = document.getElementById('contactLink');
+
+if (contactLink) {
+  contactLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('56@zotman.jpにご連絡ください。');
+  });
+}
+
