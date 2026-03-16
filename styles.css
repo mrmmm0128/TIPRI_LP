@@ -1343,6 +1343,7 @@ img {
 
 .hero__left {
   padding-left: 8px;
+  transform: translateY(-100px);
 }
 
 .hero__brand {
@@ -1370,10 +1371,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(-50px);
 }
 
 .hero__image {
-  width: 100%;
+  width: 120%;
   max-width: none;
   object-fit: contain;
 }
