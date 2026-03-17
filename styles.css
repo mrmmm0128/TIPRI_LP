@@ -168,9 +168,8 @@ a {
 }
 
 .hero__inner {
-  min-height: 520px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 32px;
   align-items: center;
 }
@@ -202,6 +201,16 @@ a {
 }
 
 .hero__right {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__media {
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,9 +218,9 @@ a {
 
 .hero__image {
   width: 100%;
-  max-width: 640px;
-  height: auto;
+  height: 100%;
   object-fit: contain;
+  object-position: center center;
 }
 
 /* Hero banner */
@@ -680,6 +689,7 @@ a {
 
 /* Responsive */
 @media (max-width: 900px) {
+
   .container {
     width: min(100% - 28px, var(--container));
   }
@@ -702,7 +712,6 @@ a {
   }
 
   .hero__inner {
-    min-height: auto;
     grid-template-columns: 1fr;
     gap: 20px;
     align-items: start;
@@ -735,9 +744,10 @@ a {
     width: 100%;
   }
 
-  .hero__image {
-    max-width: 360px;
-    margin: 0 auto;
+  .hero__media {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    max-height: 420px;
   }
 
   .heroBanner {
@@ -754,7 +764,6 @@ a {
     text-align: left;
   }
 
-  .overviewGrid,
   .howtoGrid,
   .storesFaqGrid,
   .howtoOverview,
@@ -828,8 +837,9 @@ a {
     font-size: clamp(15px, 5vw, 21px);
   }
 
-  .hero__image {
-    max-width: 300px;
+  .hero__media {
+    aspect-ratio: 1 / 1;
+    max-height: 320px;
   }
 
   .heroBanner__label {
