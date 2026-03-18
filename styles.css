@@ -163,8 +163,12 @@ a {
 
 /* Hero */
 .hero {
+  min-height: calc(100vh - 68px); 
+  display: flex;
+  align-items: center; /* 縦中央に寄せる */
   background: #ffffff;
-  padding: 56px 0 40px;
+  padding: 40px 0 40px;
+  position: relative;
 }
 
 .hero__inner {
@@ -175,7 +179,8 @@ a {
 }
 
 .hero__left {
-  padding-left: 8px;
+  padding-left: 17%;
+  margin-top: -90px;
 }
 
 .hero__brand {
@@ -208,9 +213,9 @@ a {
 
 .hero__media {
   width: 100%;
-  max-width: 620px;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
+  max-width: 900px;
+
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,8 +224,9 @@ a {
 .hero__image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+
+  object-fit: cover; /* ← contain → cover に変更 */
+  transform: scale(1.25); /* ← これ追加 */
 }
 
 /* Hero banner */
@@ -687,9 +693,7 @@ a {
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-
   .container {
     width: min(100% - 28px, var(--container));
   }
@@ -708,22 +712,25 @@ a {
   }
 
   .hero {
-    padding: 24px 0 28px;
+    min-height: auto;
+    padding: 28px 0 24px;
+    align-items: flex-start;
   }
 
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
     align-items: start;
   }
 
   .hero__left {
     padding-left: 0;
     text-align: left;
+    margin-top: 0;
   }
 
   .hero__brand {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 18px;
   }
 
@@ -742,26 +749,44 @@ a {
 
   .hero__right {
     width: 100%;
+    min-width: 0;
   }
 
   .hero__media {
+    width: 100%;
     max-width: 100%;
-    aspect-ratio: 1 / 1;
-    max-height: 420px;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    transform: none;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .heroBanner {
-    padding: 36px 0;
+    padding: 32px 0;
   }
 
   .heroBanner__inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
+  }
+
+  .heroBanner__label {
+    padding: 14px 20px;
+    font-size: clamp(20px, 6vw, 30px);
   }
 
   .heroBanner__text {
     text-align: left;
+    font-size: clamp(24px, 8vw, 40px);
+    line-height: 1.2;
   }
 
   .howtoGrid,
@@ -783,6 +808,11 @@ a {
 
   .ovText {
     max-width: 100%;
+  }
+
+  .ovFrame {
+    padding: 14px;
+    border-radius: 18px;
   }
 
   .modal__card {
@@ -829,6 +859,22 @@ a {
     width: min(100% - 24px, var(--container));
   }
 
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 24px 0 20px;
+  }
+
+  .hero__inner {
+    gap: 14px;
+  }
+
+  .hero__brand {
+    font-size: 16px;
+  }
+
   .hero__main {
     font-size: clamp(30px, 10vw, 44px);
   }
@@ -837,17 +883,62 @@ a {
     font-size: clamp(15px, 5vw, 21px);
   }
 
-  .hero__media {
-    aspect-ratio: 1 / 1;
-    max-height: 320px;
+  .heroBanner {
+    padding: 28px 0;
   }
 
   .heroBanner__label {
-    padding: 14px 20px;
+    padding: 12px 18px;
   }
 
   .modal__actions .btn {
     width: 100%;
     flex: unset;
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(17, 24, 39, 0.75);
+  text-decoration: none;
+  z-index: 2;
+}
+
+.hero__scrollText {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero__scrollLine {
+  width: 1px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.45);
+  animation: heroScrollLine 1.4s ease-in-out infinite;
+}
+
+@keyframes heroScrollLine {
+  0% {
+    opacity: 0.35;
+    transform: translateY(0);
+    height: 28px;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+    height: 44px;
+  }
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+    height: 28px;
   }
 }
