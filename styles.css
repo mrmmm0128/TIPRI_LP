@@ -641,18 +641,23 @@ img {
   transform: scale(1.02);
   transform-origin: center center;
   will-change: transform, filter;
+
+background-size: contain; /* 画像を切り取らずに収める */
+  background-repeat: no-repeat; /* 1枚だけ表示する */
+  background-position: center; /* 真ん中に置く */
 }
 
 .heroCover__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.45) 0%,
     rgba(0, 0, 0, 0.28) 35%,
     rgba(0, 0, 0, 0.18) 60%,
     rgba(0, 0, 0, 0.1) 100%
-  );
+  ); */
+  background: rgba(0, 0, 0, 0.18) 100%,;
   will-change: opacity;
 }
 
