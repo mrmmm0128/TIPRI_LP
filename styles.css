@@ -630,54 +630,40 @@ img {
   min-height: calc(100vh - var(--header-height));
   padding-top: var(--header-height);
   overflow: hidden;
+  background: #ffffff;
 }
 
 .heroCover__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
   background-image: url("assets/背景写真.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  transform: scale(1.02);
-  transform-origin: center center;
-  will-change: transform, filter;
-
-background-size: contain; /* 画像を切り取らずに収める */
-  background-repeat: no-repeat; /* 1枚だけ表示する */
-  background-position: center; /* 真ん中に置く */
 }
 
-.heroCover__overlay {
-  position: absolute;
-  inset: 0;
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.28) 35%,
-    rgba(0, 0, 0, 0.18) 60%,
-    rgba(0, 0, 0, 0.1) 100%
-  ); */
-  background: rgba(0, 0, 0, 0.18) 100%,;
-  will-change: opacity;
-}
-
-.heroCover__content {
+/* .heroCover__content {
   position: relative;
   display: flex;
   align-items: center;
   height: calc(100vh - var(--header-height));
   padding-bottom: 0;
-}
+} */
 
-.heroCover__copy,
+/* .heroCover__copy,
 .heroCover__scroll {
   will-change: opacity, transform;
-}
+} */
 
-.heroCover__copy {
+/* .heroCover__copy {
   max-width: 760px;
   color: #fff;
-}
+} */
 
 .heroCover__kicker {
   margin: 0 0 10px;
@@ -686,19 +672,19 @@ background-size: contain; /* 画像を切り取らずに収める */
   opacity: 0.95;
 }
 
-.heroCover__title {
+/* .heroCover__title {
   margin: 0 0 10px;
   font-size: clamp(56px, 8vw, 120px);
   line-height: 1;
   letter-spacing: -0.02em;
   font-weight: 900;
-}
+} */
 
-.heroCover__lead {
+/* .heroCover__lead {
   margin: 0 0 22px;
   font-size: clamp(18px, 2.1vw, 32px);
   opacity: 0.92;
-}
+} */
 
 .heroCover__download {
   display: flex;
@@ -1147,9 +1133,9 @@ background-size: contain; /* 画像を切り取らずに収める */
     font-size: 26px;
   }
 
-  .heroCover__content {
+  /* .heroCover__content {
     align-items: center;
-  }
+  } */
 
   .heroCover__download {
     flex-direction: column;
@@ -1162,14 +1148,14 @@ background-size: contain; /* 画像を切り取らずに収める */
     height: 44px;
   }
 
-  .heroCover__title {
+  /* .heroCover__title {
     font-size: clamp(42px, 14vw, 72px);
     line-height: 1.05;
-  }
+  } */
 
-  .heroCover__lead {
+  /* .heroCover__lead {
     font-size: clamp(16px, 4.8vw, 22px);
-  }
+  } */
 
   .heroCover__frame {
     width: calc(100% - 32px);
